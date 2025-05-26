@@ -1,0 +1,203 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(../img/black-funky-abstract-memphis-seamless-pattern-cool-hipster-style-memphis-seamless-pattern-trendy-bright-abstract-texture-114029821.jpg);
+    transition: all 1s ease;
+}
+nav{
+    background-color: transparent;
+    color: rgb(243, 240, 236);
+    font: normal 400 14px/24px sans-serif;
+    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+    
+a{
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-style: inset;
+    padding: 5px 10px;
+}
+a:hover{
+    background: rgba(169, 169, 169, 0.137);
+}
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: 1px solid linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    outline: none;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+h2{
+    font-size: 3.625rem;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+.container-promo{
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.container-content{
+    color: #fff;
+    display: flex;
+    justify-content: center;   
+    gap: 1rem;
+}
+.container-content-block {
+    width: 350px;
+    height: 400px;
+    background-color: #434346;
+    border-radius: 15px;
+    opacity: 0.8;
+    padding: 4rem;
+}
+.icon{
+    margin-bottom: 1rem;
+}
+.icon-first::before,
+.icon-second::before,
+.icon-third::before{
+    font-family: 'fontawesome';
+    color: white;
+    background-color: red;
+    font-size: 2rem;
+    letter-spacing: 0.6rem;
+    border-radius: 4px;
+}
+.icon-first::before{
+    content: '\f06e';  
+}
+.icon-second::before{
+    content: '\f024';   
+}
+.icon-third::before{
+    content: '\f1fa';    
+}
+footer{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    background: rgb(29, 29, 29);
+    font: normal 400 14px/24px sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+    gap: 5px;
+    
+    /* border-bottom: 3px solid red; */
+}
+footer::after{
+    content: '';
+    width: 1200px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 50px;
+}
+
+.first, .second, .third{
+    margin: 50px;
+}
+h5{
+    position: absolute;
+    align-self: flex-end;
+    white-space: nowrap;
+    font-size: 10px;
+    bottom: 0;
+}
+
+
+img{
+    width: 40px;
+    height: 40px;  
+}
+
+.fb, .inst{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+.fb:hover{
+    content: url(../img/fb.png);
+}
+
+.inst:hover{
+    content: url(../img/insta.png);
+}
